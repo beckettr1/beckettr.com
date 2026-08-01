@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beckett Reynolds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #0a0a0a;
+    --line: #dedede;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 1.25rem;
+  }
+
+  h1 {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    font-size: clamp(2.1rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+
+  .sub {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    max-width: 34ch;
+    margin: 0 0 2.5rem;
+  }
+
+  .about {
+    font-size: 1rem;
+    max-width: 56ch;
+    margin: 0 0 3.5rem;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0 0 2.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  nav li {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  nav a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 0.25rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background-color 120ms ease, color 120ms ease, padding-left 120ms ease;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    background: var(--ink);
+    color: var(--bg);
+    padding-left: 0.75rem;
+  }
+
+  nav a:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: -2px;
+  }
+
+  .link-name {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .link-desc {
+    font-size: 0.85rem;
+    color: #6b6b6b;
+    text-align: right;
+    transition: color 120ms ease;
+  }
+
+  nav a:hover .link-desc,
+  nav a:focus-visible .link-desc {
+    color: #d9d9d9;
+  }
+
+  .arrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 120ms ease, transform 120ms ease;
+  }
+
+  nav a:hover .arrow,
+  nav a:focus-visible .arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.75rem;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 4rem 1.25rem 3rem; }
+    .link-desc { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow mono">Beckett Reynolds</p>
+    <h1>I build things<br>worth using.</h1>
+    <p class="sub">Web design, an AI product, and a card business, mostly built between classes.</p>
+
+    <p class="about">
+      I'm a junior who spends most of my free time building. I design and maintain
+      websites for a handful of local businesses, run Brass &amp; Board, a trading card
+      resale shop, and built Hamster AI, a small AI platform. I like things that are
+      simple, fast, and made with intention.
+    </p>
+
+    <hr class="divider">
+
+    <nav aria-label="Projects and links">
+      <ul>
+        <li>
+          <a href="https://brassandboard.com" target="_blank" rel="noopener">
+            <span class="link-name">Brass &amp; Board</span>
+            <span class="link-desc">TCG resale <span class="arrow">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://hamsterai.net" target="_blank" rel="noopener">
+            <span class="link-name">Hamster AI</span>
+            <span class="link-desc">AI platform <span class="arrow">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://dribbble.com/BeckettR" target="_blank" rel="noopener">
+            <span class="link-name">Web design</span>
+            <span class="link-desc">Client work <span class="arrow">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:beckett@btrcreative.com">
+            <span class="link-name">Email</span>
+            <span class="link-desc">Say hi <span class="arrow">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://protectseas.org" target="_blank" rel="noopener">
+            <span class="link-name">My first site (6th grade)</span>
+            <span class="link-desc"><span class="arrow">&rarr;</span></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer class="mono">
+      <span>&copy; 2026 Beckett Reynolds</span>
+      <span>Built by hand</span>
+    </footer>
+  </div>
+</body>
+</html>
